@@ -1,0 +1,39 @@
+.container{
+  max-width: 900px;
+  margin: 0 auto;
+}
+.bookGroup{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  > div{
+    width: 32%;
+    //flex: 0 1 20%;
+    img{
+      width: 100%;
+    }
+  }
+}
+
+.btn{
+  padding: 10px;
+  border: solid 1px black;
+  border-radius: 10px;
+  cursor: pointer;
+  &:hover{
+    background-color: black;
+    color: white;
+  }
+}
+
+input{
+  border: solid 1px black;
+  padding: 5px;
+}
+
+.container{
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
