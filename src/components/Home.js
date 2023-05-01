@@ -37,9 +37,17 @@ export default function Home(){
 
     return <div className={"Home"}>
         <button className="btn" onClick={()=>navigate("/cart")}>Cart {cart.length}</button>
-        <button className="btn" onClick={()=>navigate("/login")}>Login</button>
-        <button className="btn" onClick={()=>navigate("/signup")}>SignUp</button>
+        {
+            user == false &&  <button className="btn" onClick={()=>navigate("/login")}>Login</button>
+        }
+        {
+            user == false &&    <button className="btn" onClick={()=>navigate("/signup")}>SignUp</button>
+        }
+      
         <div className="container">
+            {
+                user !== false && <h1 style={{fontWeight: "bold", fontSize: "30px" }}>Welcome {user.username}</h1>
+        }
         <div className={"bookGroup"}>
         {
             books.map((b, i) => {
